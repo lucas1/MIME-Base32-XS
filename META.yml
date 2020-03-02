@@ -1,7 +1,7 @@
 ---
 abstract: 'MIME::Base32::XS - Encoding and decoding Base32'
 author:
-  - 'Lucas Tiago de Moraes'
+  - 'Lucas Tiago de Moraes <lucastiagodemoraes@gmail.com>'
 build_requires:
   ExtUtils::MakeMaker: '0'
 configure_requires:
@@ -25,5 +25,5 @@ resources:
   bugtracker: https://github.com/lucas1/MIME-Base32-XS/issues
   homepage: https://github.com/lucas1/MIME-Base32-XS
   repository: https://github.com/lucas1/MIME-Base32-XS
-version: '0.02'
+version: '0.03'
 x_serialization_backend: 'CPAN::Meta::YAML version 0.018'

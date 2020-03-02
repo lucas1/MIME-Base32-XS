@@ -1,7 +1,7 @@
 {
    "abstract" : "MIME::Base32::XS - Encoding and decoding Base32",
    "author" : [
-      "Lucas Tiago de Moraes"
+      "Lucas Tiago de Moraes <lucastiagodemoraes@gmail.com>"
    ],
    "dynamic_config" : 0,
    "generated_by" : "ExtUtils::MakeMaker version 7.34, CPAN::Meta::Converter version 2.150010",
@@ -49,6 +49,6 @@
          "web" : "https://github.com/lucas1/MIME-Base32-XS"
       }
    },
-   "version" : "0.02",
+   "version" : "0.03",
    "x_serialization_backend" : "JSON::PP version 4.02"
 }

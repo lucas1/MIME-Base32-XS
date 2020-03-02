@@ -5,11 +5,9 @@ WriteMakefile(
     NAME             => 'MIME::Base32::XS',
     ABSTRACT         => 'MIME::Base32::XS - Encoding and decoding Base32',
     VERSION_FROM     => 'lib/MIME/Base32/XS.pm',
-    AUTHOR           => 'Lucas Tiago de Moraes',
+    AUTHOR           => 'Lucas Tiago de Moraes <lucastiagodemoraes@gmail.com>',
     LICENSE          => 'perl_5',
     MIN_PERL_VERSION => '5.008005',
-    INC              => '-I.',
-    OBJECT           => '$(O_FILES)',
     
     META_MERGE => {
         'meta-spec' => {
