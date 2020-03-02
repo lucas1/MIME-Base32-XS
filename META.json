@@ -32,7 +32,7 @@
       },
       "runtime" : {
          "requires" : {
-            "Exporter" : "5.57",
+            "Exporter" : "0",
             "XSLoader" : "0",
             "perl" : "5.008005"
          }
@@ -49,6 +49,6 @@
          "web" : "https://github.com/lucas1/MIME-Base32-XS"
       }
    },
-   "version" : "0.01",
+   "version" : "0.02",
    "x_serialization_backend" : "JSON::PP version 4.02"
 }

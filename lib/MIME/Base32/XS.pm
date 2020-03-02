@@ -3,9 +3,9 @@ package MIME::Base32::XS;
 use strict;
 use warnings;
 use XSLoader;
-use Exporter 5.57 'import';
+use base qw/Exporter/;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 our @EXPORT  = qw/
     encode_base32
@@ -20,7 +20,7 @@ XSLoader::load('MIME::Base32::XS', $VERSION);
 
 =head1 NAME
 
-MIME::Base32::XS - Encoding and decoding base32
+MIME::Base32::XS - Encoding and decoding Base32
 
 =head1 SYNOPSIS
  
@@ -32,7 +32,7 @@ MIME::Base32::XS - Encoding and decoding base32
 =head1 DESCRIPTION
 
 This module provides functions to encode and decode strings into and from the
-base32 encoding specified in RFC 3548.
+Base32 encoding specified in RFC 3548.
 
 =head1 METHODS
 

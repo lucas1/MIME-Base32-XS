@@ -33,7 +33,7 @@ WriteMakefile(
     
     PREREQ_PM => {
         'XSLoader' => 0,
-        'Exporter' => '5.57'
+        'Exporter' => 0
     },
     
     test => {
