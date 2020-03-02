@@ -6,6 +6,6 @@ META.yml
 README.md
 t/test.t
 lib/MIME/Base32/XS.pm
-Base32.xs
+XS.xs
 ppport.h
 cpanfile
