@@ -5,7 +5,7 @@ use warnings;
 use XSLoader;
 use base qw/Exporter/;
 
-our $VERSION = '0.04';
+$VERSION = '0.06';
 
 our @EXPORT  = qw/
     encode_base32
@@ -40,13 +40,9 @@ Base32 encoding specified in RFC 3548.
  
     my $encoded = encode_base32('Baz');
 
-Encode from string.
-
 =head2 decode_base32
  
     my $decoded = decode_base32('IJQXU===');
-
-Decode to string.
 
 =head1 AUTHOR
   

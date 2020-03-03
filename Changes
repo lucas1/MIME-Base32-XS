@@ -15,3 +15,9 @@
              the DB due the following error: C< Lock wait timeout
              exceeded; try restarting transaction >. Please report the
              case to the PAUSE admins at modules@perl.org.
+
+0.05 2020-03-02T20:12:00Z
+    - Solved error in doc
+
+0.06 2020-03-03T00:02:00Z
+    - Solved problem variable $VERSION

@@ -49,6 +49,6 @@
          "web" : "https://github.com/lucas1/MIME-Base32-XS"
       }
    },
-   "version" : "0.04",
+   "version" : "0.06",
    "x_serialization_backend" : "JSON::PP version 4.02"
 }
