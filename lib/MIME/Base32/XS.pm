@@ -5,7 +5,7 @@ use warnings;
 use XSLoader;
 use base qw/Exporter/;
 
-$VERSION = '0.06';
+our $VERSION = '0.08';
 
 our @EXPORT  = qw/
     encode_base32

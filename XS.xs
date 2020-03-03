@@ -15,7 +15,7 @@ encode_base32(SV *sv)
     SSize_t size;
     unsigned char *input;
     unsigned char *output;
-    unsigned long int x = 0;
+    unsigned long long x = 0;
     unsigned int i, z, n = 0;
     char ap[5] = {0, 6, 4, 3, 1};
     
@@ -66,7 +66,7 @@ decode_base32(SV *sv)
     SSize_t size;
     unsigned char *input;
     char *output;
-    unsigned long int x;
+    unsigned long long x;
     unsigned int i, z, rtsize, n = 0;
     unsigned char pad;
     unsigned char t;
