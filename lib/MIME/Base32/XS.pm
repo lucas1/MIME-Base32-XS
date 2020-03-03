@@ -5,7 +5,7 @@ use warnings;
 use XSLoader;
 use base qw/Exporter/;
 
-our $VERSION = '0.08';
+our $VERSION = '0.09';
 
 our @EXPORT  = qw/
     encode_base32
@@ -47,6 +47,10 @@ Base32 encoding specified in RFC 3548.
 =head1 AUTHOR
   
 Lucas Tiago de Moraes C<lucastiagodemoraes@gmail.com>
+
+=head1 CONTRIBUTORS
+
+Orestes Leal Rodriguez C<olealrd1981@gmail.com>
   
 =head1 COPYRIGHT AND LICENSE
   

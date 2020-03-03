@@ -27,3 +27,6 @@
 
 0.08 2020-03-03T15:02:00Z
     - Solved errors left shift count and right shift count in OS Windows.
+
+0.09 2020-03-03T19:16:00Z
+    - Solved error in decode.

@@ -23,9 +23,9 @@ encode_base32(SV *sv)
     input = SvPV(sv, len);
     size = (SSize_t)len;
     
-    len = (size * 2) + ap[size % 5];
-    
+    len = (size * 2) + ap[size % 5];    
     RETVAL = newSV(len ? len : 1);
+    
     SvPOK_on(RETVAL);
     output = SvPVX(RETVAL);
     
@@ -76,16 +76,17 @@ decode_base32(SV *sv)
     input = SvPV(sv, len);
     size = (SSize_t)len;
     
-    for (pad = 0, i = len-1; input[i] == '='; i--)
+    for (pad = 0, i = len-1; input[i] == '='; i--) {
 	++pad;
-   
-    len = len * 3 / 4;
-    size -= pad;
+        --size;
+    }
     
+    len = (len * 3 / 4);
     RETVAL = newSV(len ? len : 1);
+
     SvPOK_on(RETVAL);
     output = SvPVX(RETVAL);
-    
+
     for (i = 0; i < size; i++) {
         if (input[i] != '=') {
 	    for (x = 0, z = 0; z < 8 && i < size; z++, i++) {
@@ -97,20 +98,20 @@ decode_base32(SV *sv)
 	    }
 	
 	    x <<= (19 + ((8-z)*5)); 
-	    *output++ = x >> 56; 
+	    *output++ = x >> 56;
 	    *output++ = (x << 8) >> 56;
 	    *output++ = (x << 16) >> 56;
 	    *output++ = (x << 24) >> 56;
 	    *output++ = (x << 32) >> 56;
 	    --i;       
-
-            n += 5;
         }
     }
-    
-    *output = '\0';
 
-    SvCUR_set(RETVAL, n - 4);
+    n = (size >> 3) * 5 + lkpad[pad];
+
+    output[n] = '\0';
+
+    SvCUR_set(RETVAL, n);
     
     OUTPUT:
     RETVAL

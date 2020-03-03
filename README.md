@@ -27,6 +27,10 @@ This module provides functions to encode and decode strings into and from the Ba
 
 Lucas Tiago de Moraes `lucastiagodemoraes@gmail.com`
 
+# CONTRIBUTORS
+
+Orestes Leal Rodriguez `olealrd1981@gmail.com`
+
 # COPYRIGHT AND LICENSE
 
 This software is copyright (c) 2020 by Lucas Tiago de Moraes.
