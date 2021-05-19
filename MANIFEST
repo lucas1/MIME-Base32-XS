@@ -9,3 +9,4 @@ lib/MIME/Base32/XS.pm
 XS.xs
 ppport.h
 cpanfile
+typemap
