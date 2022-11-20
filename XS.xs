@@ -2,7 +2,6 @@
 #include "EXTERN.h"
 #include "perl.h"
 #include "XSUB.h"
-#include "ppport.h"
 
 #define XX      255
 #define INVALID XX
@@ -42,20 +41,19 @@ encode_base32(SV *sv)
     CODE:
     input = SvPV(sv, len);
     size = (SSize_t)len;
-
     len = (size * 2) + ap[size % 5];
     RETVAL = newSV(len ? len : 1);
-
     SvPOK_on(RETVAL);
     output = SvPVX(RETVAL);
 
-    for (i=0; i<size; i++) {
-        for (z=0; z<5 && i<size; z++, i++) {
+    for (i = 0; i < size; i++) {
+        for (z = 0; z < 5 && i < size; z++, i++) {
             x |= input[i];
             x <<= 8;
         }
 
         x <<= (7 - z) << 3;
+
         *output++ = base_32[x >> 59];
         *output++ = base_32[(x << 5) >> 59];
         *output++ = base_32[(x << 10) >> 59];
@@ -86,7 +84,7 @@ decode_base32(SV *sv)
     SSize_t size;
     unsigned char *input;
     char *output;
-    uint64_t x;
+    unsigned long long x;
     unsigned int i, z, rtsize, v, n = 0;
     unsigned char pad;
     unsigned char t;
